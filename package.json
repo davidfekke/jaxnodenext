@@ -1,0 +1,28 @@
+{
+  "name": "jaxnodenext",
+  "version": "0.0.1",
+  "description": "Command line tool for checking on the next jaxnode meeting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidfekke/jaxnodenext.git"
+  },
+  "keywords": [
+    "node",
+    "jaxnode",
+    "meeting",
+    "next"
+  ],
+  "author": "David Fekke <davidfekke@gmail.com> (jaxnode.com)",
+  "license": "Apache-2.0",
+  "bin": {
+    "jnn": "./index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/davidfekke/jaxnodenext/issues"
+  },
+  "homepage": "https://github.com/davidfekke/jaxnodenext#readme"
+}
