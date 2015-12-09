@@ -22,9 +22,11 @@ var req = http.request(options, function (response)  {
 	});
 	response.on('end', function() {
 		nextMeeting = JSON.parse(result);
+		var mapurl = 'https://www.google.com/maps/place/' + nextMeeting.meeting.venue.name + '/@' + nextMeeting.meeting.venue.lat + ',' + nextMeeting.meeting.venue.lon + 'z18';
 		var meetingText = 'The next JaxNode meeting will be on ' + nextMeeting.meeting.time + ' at ' + nextMeeting.meeting.venue.name;
 		console.log(meetingText);
 		open('http://www.jaxnode.com');
+		//open(mapurl);
 	});
 });
 
