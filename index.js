@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-var http = require('http');
+var http = require('http'),
+	nextMeeting;
 
 var options = {
 	hostname: 'www.jaxnode.com',
@@ -13,14 +14,16 @@ var options = {
 };
 
 var req = http.request(options, function (response)  {
+	var result = '';
 	response.setEncoding('utf8');
 	response.on('data', function (chunk) {
-		console.log(chunk);
+		result += chunk;
 	});
 	response.on('end', function() {
-		
+		nextMeeting = JSON.parse(result);
+		var meetingText = 'The next JaxNode meeting will be on ' + nextMeeting.meeting.time + ' at ' + nextMeeting.meeting.venue.name;
+		console.log(meetingText);
 	});
 });
 
 req.end();
-console.log('Hello, world!');
