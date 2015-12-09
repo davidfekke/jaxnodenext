@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var http = require('http'),
+	open = require('open'),
 	nextMeeting;
 
 var options = {
@@ -23,6 +24,7 @@ var req = http.request(options, function (response)  {
 		nextMeeting = JSON.parse(result);
 		var meetingText = 'The next JaxNode meeting will be on ' + nextMeeting.meeting.time + ' at ' + nextMeeting.meeting.venue.name;
 		console.log(meetingText);
+		open('http://www.jaxnode.com');
 	});
 });
 
