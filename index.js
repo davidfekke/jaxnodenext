@@ -3,9 +3,12 @@
 var open = require('open'),
 	JnnData = require('./lib'),
 	program = require('commander'),
+	path = require('path'),
+	pkg = require( path.join(__dirname, 'package.json') ),
 	nextMeeting;
 
 program
+	.version(pkg.version)
 	.option('-d, --details', 'More details about the meetup')
 	.option('-m, --map', 'Google Map to Meetup location')
 	.option('-l, --link', 'Open the home page url')
