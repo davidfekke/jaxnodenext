@@ -18,6 +18,17 @@ program
 JnnData.getNextMeeting(function (nextMeeting) {
 	var mapurl = 'https://www.google.com/maps/place/' + nextMeeting.meeting.venue.name + '/@' + nextMeeting.meeting.venue.lat + ',' + nextMeeting.meeting.venue.lon + 'z18';
 	var meetingText = 'The next JaxNode meeting will be on ' + nextMeeting.meeting.time + ' at ' + nextMeeting.meeting.venue.name;
+	console.log('@@O==@@@%==#@@&==#@@==&@@@@@@@@@@@@@@@@@!?@@@@@@@@');
+	console.log('@@O==@@@===*@@@o==@$=o@@@@@@@@@@@@@@@@@@e ?@@@@@@@');
+	console.log('@@O==@@@====@@@@==$==@@@@@@@@@@@@@@@@@@@e ?@@@@@@@');
+	console.log('@@O==@@%=O==&@@@$===%@@@@o@@@@@@$@@@@@@%e ?@@@?@@@');
+	console.log('@@O==@@==@i=*@@@@===@@@!   +@@O===!@@O    ?@O   ;@');
+	console.log('@@O==@@==@$==@@@$===%@@  =  #@=====#@  _  ?@  :  ?');
+	console.log('@@O==@%======&@@==?==@@  @+ #@=====#@  @e ?@  =e!@');
+	console.log('O#i==@==$$$==e@*=$@==o@  @+ #@=====#@  `  ?@   #@@');
+	console.log('o===O@==@@@%==&==@@#==&=@@@?&@@o==#@@@.  ?@@@_  #@');
+	console.log('#?%@@&#&@@@@####&@@@###@@@@@@@@@@@@@@@@&@@@@@@@@@@');
+	console.log();
 	console.log(meetingText);
 	if (program.details) {
 		console.log(nextMeeting.meeting.name + ':' + nextMeeting.meeting.description);
