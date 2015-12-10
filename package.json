@@ -4,7 +4,7 @@
   "description": "Command line tool for checking on the next jaxnode meeting",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/commandtests.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,12 @@
   },
   "homepage": "https://github.com/davidfekke/jaxnodenext#readme",
   "dependencies": {
+    "commander": "^2.9.0",
     "open": "0.0.5"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2"
   }
 }
