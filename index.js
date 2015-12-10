@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#! /usr/bin/env node
 
 var open = require('open'),
 	JnnData = require('./lib'),
