@@ -1,5 +1,7 @@
 # JaxNode Command Line tool
 
+[![Build Status](https://travis-ci.org/davidfekke/jaxnodenext.svg?branch=master)](https://travis-ci.org/davidfekke/jaxnodenext)
+
 This tool can be used to find the next jaxnode meeting. 
 Simply type 'jnn' into your console to find out when and where the next JaxNode meeting will take place.
 
