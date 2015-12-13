@@ -3,6 +3,7 @@
 var open = require('open'),
 	JnnData = require('./lib'),
 	program = require('commander'),
+	asciify = require('asciify'),
 	path = require('path'),
 	pkg = require( path.join(__dirname, 'package.json') ),
 	nextMeeting;
@@ -13,36 +14,35 @@ program
 	.option('-m, --map', 'Google Map to Meetup location')
 	.option('-l, --link', 'Open the home page url')
 	.option('-a, --address', 'Show the venue address')
+	.option('-e, --easteregg', 'Tell you friends to \'jnn -e\' LoL!')
 	.parse(process.argv);
 
 JnnData.getNextMeeting(function (nextMeeting) {
-	var mapurl = 'https://www.google.com/maps/place/' + nextMeeting.meeting.venue.name + '/@' + nextMeeting.meeting.venue.lat + ',' + nextMeeting.meeting.venue.lon + 'z18';
-	var meetingText = 'The next JaxNode meeting will be on ' + nextMeeting.meeting.time + ' at ' + nextMeeting.meeting.venue.name;
-	console.log('@@O==@@@%==#@@&==#@@==&@@@@@@@@@@@@@@@@@!?@@@@@@@@');
-	console.log('@@O==@@@===*@@@o==@$=o@@@@@@@@@@@@@@@@@@e ?@@@@@@@');
-	console.log('@@O==@@@====@@@@==$==@@@@@@@@@@@@@@@@@@@e ?@@@@@@@');
-	console.log('@@O==@@%=O==&@@@$===%@@@@o@@@@@@$@@@@@@%e ?@@@?@@@');
-	console.log('@@O==@@==@i=*@@@@===@@@!   +@@O===!@@O    ?@O   ;@');
-	console.log('@@O==@@==@$==@@@$===%@@  =  #@=====#@  _  ?@  :  ?');
-	console.log('@@O==@%======&@@==?==@@  @+ #@=====#@  @e ?@  =e!@');
-	console.log('O#i==@==$$$==e@*=$@==o@  @+ #@=====#@  `  ?@   #@@');
-	console.log('o===O@==@@@%==&==@@#==&=@@@?&@@o==#@@@.  ?@@@_  #@');
-	console.log('#?%@@&#&@@@@####&@@@###@@@@@@@@@@@@@@@@&@@@@@@@@@@');
-	console.log();
-	console.log(meetingText);
-	if (program.details) {
-		console.log(nextMeeting.meeting.name + ':' + nextMeeting.meeting.description);
-	}
-	if (program.map) {
-		open(mapurl);
-	}
-	if (program.link) {
-		open('http://www.jaxnode.com');	
-	}
-	if (program.address) {
-		console.log(nextMeeting.meeting.venue.name);
-		console.log(nextMeeting.meeting.venue.address_1);
-		console.log(nextMeeting.meeting.venue.city + ', ' + nextMeeting.meeting.venue.state);
-	}
+	asciify('JaxNode', {font:'larry3d'}, function(err, res){ 
+		console.log(res); 
+		
+		var mapurl = 'https://www.google.com/maps/place/' + nextMeeting.meeting.venue.name + '/@' + nextMeeting.meeting.venue.lat + ',' + nextMeeting.meeting.venue.lon + 'z18';
+		var meetingText = 'The next JaxNode meeting will be on ' + nextMeeting.meeting.time + ' at ' + nextMeeting.meeting.venue.name;
+	
+		console.log(meetingText);
+
+		if (program.details) {
+			console.log(nextMeeting.meeting.name + ':' + nextMeeting.meeting.description);
+		}
+		if (program.map) {
+			open(mapurl);
+		}
+		if (program.link) {
+			open('http://www.jaxnode.com');	
+		}
+		if (program.address) {
+			console.log(nextMeeting.meeting.venue.name);
+			console.log(nextMeeting.meeting.venue.address_1);
+			console.log(nextMeeting.meeting.venue.city + ', ' + nextMeeting.meeting.venue.state);
+		}
+		if (program.easteregg) {
+			open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+		}
+	});
 });
 

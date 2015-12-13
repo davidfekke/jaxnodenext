@@ -30,6 +30,7 @@ This tool will allow to view the help options using the following command;
     -m, --map      Google Map to Meetup location
     -l, --link     Open the home page url
     -a, --address  Show the venue address
+    -e, --easteregg  Tell you friends to 'jnn -e' LoL!
 ```
 
 The `--details` option will give you the full meeting title and description.
