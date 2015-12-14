@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/davidfekke/jaxnodenext.svg?branch=master)](https://travis-ci.org/davidfekke/jaxnodenext)
 
-![Screenshot of command line](https://github.com/davidfekke/jaxnodenext/blob/master/snip_20151214120446.png?raw=true)
+![Screenshot of command line](https://raw.githubusercontent.com/davidfekke/jaxnodenext/master/jaxnodesnap.png)
 
 
 
