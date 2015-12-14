@@ -1,6 +1,6 @@
 {
   "name": "jaxnodenext",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Command line tool for checking on the next jaxnode meeting",
   "main": "index.js",
   "scripts": {
