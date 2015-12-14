@@ -18,7 +18,7 @@ program
 	.parse(process.argv);
 
 JnnData.getNextMeeting(function (nextMeeting) {
-	asciify('JaxNode', {font:'larry3d'}, function(err, res){ 
+	asciify('JaxNode', {font:'larry3d', color: 'green'}, function(err, res){ 
 		console.log(res); 
 		
 		var mapurl = 'https://www.google.com/maps/place/' + nextMeeting.meeting.venue.name + '/@' + nextMeeting.meeting.venue.lat + ',' + nextMeeting.meeting.venue.lon + 'z18';
