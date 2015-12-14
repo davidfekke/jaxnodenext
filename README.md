@@ -15,7 +15,17 @@ To find out when the next meeting will take place, type the following command;
 
 ```
 > jnn
-"The next JaxNode meeting will be on Jan 21, 2016 6:30 PM at Availity"
+ _____                       __  __               __             
+/\___ \                     /\ \/\ \             /\ \            
+\/__/\ \     __      __  _  \ \ `\\ \     ___    \_\ \      __   
+   _\ \ \  /'__`\   /\ \/'\  \ \ , ` \   / __`\  /'_` \   /'__`\ 
+  /\ \_\ \/\ \L\.\_ \/>  </   \ \ \`\ \ /\ \L\ \/\ \L\ \ /\  __/ 
+  \ \____/\ \__/.\_\ /\_/\_\   \ \_\ \_\\ \____/\ \___,_\\ \____\
+   \/___/  \/__/\/_/ \//\/_/    \/_/\/_/ \/___/  \/__,_ / \/____/
+                                                                 
+                                                                 
+
+The next JaxNode meeting will be on Jan 21, 2016 6:30 PM at Availity
 ```
 This tool will allow to view the help options using the following command;
 
