@@ -4,6 +4,7 @@ var open = require('open'),
 	JnnData = require('./lib'),
 	program = require('commander'),
 	asciify = require('asciify'),
+	chalk = require('chalk'),
 	path = require('path'),
 	pkg = require( path.join(__dirname, 'package.json') ),
 	nextMeeting;
@@ -27,7 +28,8 @@ JnnData.getNextMeeting(function (nextMeeting) {
 		console.log(meetingText);
 
 		if (program.details) {
-			console.log(nextMeeting.meeting.name + ':' + nextMeeting.meeting.description);
+			var cleanDescription = nextMeeting.meeting.description.replace(/(&nbsp;|<([^>]+)>)/ig, "");
+			console.log( chalk.yellow.bold( nextMeeting.meeting.name + ': ') + chalk.yellow( cleanDescription ));
 		}
 		if (program.map) {
 			open(mapurl);
