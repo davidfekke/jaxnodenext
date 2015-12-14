@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/davidfekke/jaxnodenext.svg?branch=master)](https://travis-ci.org/davidfekke/jaxnodenext)
 
+![Screenshot of command line](https://github.com/davidfekke/jaxnodenext/blob/master/snip_20151214120446.png?raw=true)
+
+
+
 This tool can be used to find the next jaxnode meeting. 
 Simply type 'jnn' into your console to find out when and where the next JaxNode meeting will take place.
 
@@ -50,6 +54,8 @@ The `--map` option will open up a Google map in your default browser of the venu
 The `--link` opens up the JaxNode.com website in your default web browser. We display the next meetup information on our home page.
 
 The `--address` displays the venue address for the next meetup.
+
+The `--easteregg` is, well, you will have to check that one out for yourself.
 
 Copyright [2015] [JaxNode]
 
