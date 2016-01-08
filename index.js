@@ -35,7 +35,7 @@ JnnData.getNextMeeting(function (nextMeeting) {
 			open(mapurl);
 		}
 		if (program.link) {
-			open('http://www.jaxnode.com');	
+			open('https://www.jaxnode.com');	
 		}
 		if (program.address) {
 			console.log(nextMeeting.meeting.venue.name);
