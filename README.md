@@ -1,7 +1,7 @@
 # JaxNode Command Line tool
 
 [![Build Status](https://travis-ci.org/davidfekke/jaxnodenext.svg?branch=master)](https://travis-ci.org/davidfekke/jaxnodenext)
-
+[![Platforms](https://img.shields.io/badge/Platforms-OS%20X%20%7C%20iOS%20%7C%20Linux%20-green.svg?style=flat)](https://www.jaxnode.com/apps/JaxNodeNext)
 ![Screenshot of command line](https://raw.githubusercontent.com/davidfekke/jaxnodenext/master/jaxnodesnap.png)
 
 
