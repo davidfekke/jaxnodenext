@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 var open = require('open'),
-	JnnData = require('./lib'),
+	getNextMeeting = require('./lib'),
 	program = require('commander'),
 	asciify = require('asciify'),
 	chalk = require('chalk'),
@@ -18,8 +18,8 @@ program
 	.option('-e, --easteregg', 'Tell you friends to \'jnn -e\' LoL!')
 	.parse(process.argv);
 
-JnnData.getNextMeeting(function (nextMeeting) {
-	asciify('JaxNode', {font:'larry3d', color: 'green'}, function(err, res){ 
+function main(nextMeeting) {
+    asciify('JaxNode', {font:'larry3d', color: 'green'}, function(err, res){ 
 		console.log(res); 
 		
 		var mapurl = 'https://www.google.com/maps/place/' + nextMeeting.meeting.venue.name + '/@' + nextMeeting.meeting.venue.lat + ',' + nextMeeting.meeting.venue.lon + 'z18';
@@ -46,5 +46,6 @@ JnnData.getNextMeeting(function (nextMeeting) {
 			open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 		}
 	});
-});
+}
 
+getNextMeeting(main);
