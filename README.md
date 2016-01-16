@@ -2,6 +2,19 @@
 
 [![Build Status](https://travis-ci.org/davidfekke/jaxnodenext.svg?branch=master)](https://travis-ci.org/davidfekke/jaxnodenext)
 [![Platforms](https://img.shields.io/badge/Platforms-OS%20X%20%7C%20iOS%20%7C%20Linux%20-green.svg?style=flat)](https://www.jaxnode.com/apps/JaxNodeNext)
+[![NPM version][npm-image]][npm-url] 
+[![Downloads][downloads-image]][npm-url]
+[![Coverage Status](https://coveralls.io/repos/davidfekke/jaxnodenext/badge.svg?branch=master&service=github)](https://coveralls.io/github/davidfekke/jaxnodenext?branch=master)
+[![npm version](https://badge.fury.io/js/jaxnodenext.svg)](https://badge.fury.io/js/dogyears)
+[![Node v5.0](http://img.shields.io/badge/node-v5.0-brightgreen.svg)](https://nodejs.org)
+[![Node v4.0](http://img.shields.io/badge/node-v4.0-green.svg)](https://nodejs.org)
+[![Node v0.12](http://img.shields.io/badge/node-v0.12-yellowgreen.svg)](https://nodejs.org)
+[![Node v0.10](http://img.shields.io/badge/node-v0.10-yellow.svg)](https://nodejs.org)
+
+[downloads-image]: https://img.shields.io/npm/dm/jaxnodenext.svg
+[npm-url]: https://www.npmjs.com/package/jaxnodenext
+[npm-image]: https://img.shields.io/npm/v/jaxnodenext.svg
+
 ![Screenshot of command line](https://raw.githubusercontent.com/davidfekke/jaxnodenext/master/jaxnodesnap.png)
 
 

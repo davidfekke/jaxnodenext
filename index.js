@@ -1,13 +1,13 @@
 #! /usr/bin/env node
+'use strict';
 
-var open = require('open'),
-	getNextMeeting = require('./lib'),
-	program = require('commander'),
-	asciify = require('asciify'),
-	chalk = require('chalk'),
-	path = require('path'),
-	pkg = require( path.join(__dirname, 'package.json') ),
-	nextMeeting;
+var open = require('open');
+var getNextMeeting = require('./lib');
+var program = require('commander');
+var asciify = require('asciify');
+var chalk = require('chalk');
+var path = require('path');
+var pkg = require(path.join(__dirname, 'package.json'));
 
 program
 	.version(pkg.version)
@@ -19,33 +19,33 @@ program
 	.parse(process.argv);
 
 function main(nextMeeting) {
-    asciify('JaxNode', {font:'larry3d', color: 'green'}, function(err, res){ 
-		console.log(res); 
-		
-		var mapurl = 'https://www.google.com/maps/place/' + nextMeeting.meeting.venue.name + '/@' + nextMeeting.meeting.venue.lat + ',' + nextMeeting.meeting.venue.lon + 'z18';
-		var meetingText = 'The next JaxNode meeting will be on ' + nextMeeting.meeting.time + ' at ' + nextMeeting.meeting.venue.name;
-	
-		console.log(meetingText);
+    asciify('JaxNode', { font: 'larry3d', color: 'green' }, function (err, res) {
+        console.log(res);
 
-		if (program.details) {
-			var cleanDescription = nextMeeting.meeting.description.replace(/(&nbsp;|<([^>]+)>)/ig, "");
-			console.log( chalk.yellow.bold( nextMeeting.meeting.name + ': ') + chalk.yellow( cleanDescription ));
-		}
-		if (program.map) {
-			open(mapurl);
-		}
-		if (program.link) {
-			open('https://www.jaxnode.com');	
-		}
-		if (program.address) {
-			console.log(nextMeeting.meeting.venue.name);
-			console.log(nextMeeting.meeting.venue.address_1);
-			console.log(nextMeeting.meeting.venue.city + ', ' + nextMeeting.meeting.venue.state);
-		}
-		if (program.easteregg) {
-			open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-		}
-	});
+        var mapurl = 'https://www.google.com/maps/place/' + nextMeeting.meeting.venue.name + '/@' + nextMeeting.meeting.venue.lat + ',' + nextMeeting.meeting.venue.lon + 'z18';
+        var meetingText = 'The next JaxNode meeting will be on ' + nextMeeting.meeting.time + ' at ' + nextMeeting.meeting.venue.name;
+
+        console.log(meetingText);
+
+        if (program.details) {
+            var cleanDescription = nextMeeting.meeting.description.replace(/(&nbsp;|<([^>]+)>)/ig, '');
+            console.log(chalk.yellow.bold(nextMeeting.meeting.name + ': ') + chalk.yellow(cleanDescription));
+        }
+        if (program.map) {
+            open(mapurl);
+        }
+        if (program.link) {
+            open('https://www.jaxnode.com');
+        }
+        if (program.address) {
+            console.log(nextMeeting.meeting.venue.name);
+            console.log(nextMeeting.meeting.venue.address_1);
+            console.log(nextMeeting.meeting.venue.city + ', ' + nextMeeting.meeting.venue.state);
+        }
+        if (program.easteregg) {
+            open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+        }
+    });
 }
 
 getNextMeeting(main);
