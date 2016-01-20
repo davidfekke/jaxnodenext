@@ -2,6 +2,7 @@
   "name": "jaxnodenext",
   "version": "0.2.0",
   "description": "Command line tool for checking on the next jaxnode meeting",
+  "homepage": "https://www.jaxnode.com/apps/JaxNodeNext",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/commandtests.js"
@@ -24,7 +25,6 @@
   "bugs": {
     "url": "https://github.com/davidfekke/jaxnodenext/issues"
   },
-  "homepage": "https://github.com/davidfekke/jaxnodenext#readme",
   "dependencies": {
     "asciify": "^1.3.5",
     "asciimo": "^0.3.1",
