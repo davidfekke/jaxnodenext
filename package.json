@@ -1,11 +1,12 @@
 {
   "name": "jaxnodenext",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Command line tool for checking on the next jaxnode meeting",
   "homepage": "https://www.jaxnode.com/apps/JaxNodeNext",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/commandtests.js"
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
   },
   "repository": {
     "type": "git",
@@ -34,7 +35,16 @@
   },
   "devDependencies": {
     "chai": "^3.4.1",
+    "gulp": "^3.6.0",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.9.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
     "mocha": "^2.3.4",
+    "nock": "^5.2.1",
     "sinon": "^1.17.2"
   }
 }
