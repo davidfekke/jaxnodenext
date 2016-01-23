@@ -1,6 +1,6 @@
 {
   "name": "jaxnodenext",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Command line tool for checking on the next jaxnode meeting",
   "homepage": "https://www.jaxnode.com/apps/JaxNodeNext",
   "main": "index.js",
