@@ -1,7 +1,7 @@
 {
   "name": "jaxnodenext",
   "description": "A CLI tool for finding the time and location of the next JaxNode meeting.",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "author": "davidfekke @davidfekke",
   "bin": {
     "jnn": "./bin/run"
