@@ -1,52 +1,40 @@
 {
   "name": "jaxnodenext",
-  "version": "0.5.3",
-  "description": "Command line tool for checking on the next jaxnode meeting",
-  "homepage": "https://www.jaxnode.com/apps/JaxNodeNext",
-  "main": "index.js",
-  "scripts": {
-    "prepublish": "gulp prepublish",
-    "test": "gulp"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidfekke/jaxnodenext.git"
-  },
-  "keywords": [
-    "node",
-    "jaxnode",
-    "meeting",
-    "next"
-  ],
-  "author": "David Fekke <davidfekke@gmail.com> (jaxnode.com)",
-  "license": "Apache-2.0",
+  "description": "A CLI tool for finding the time and location of the next JaxNode meeting.",
+  "version": "0.6.0",
+  "author": "davidfekke @davidfekke",
   "bin": {
-    "jnn": "./index.js"
+    "jnn": "./bin/run"
   },
-  "bugs": {
-    "url": "https://github.com/davidfekke/jaxnodenext/issues"
-  },
+  "bugs": "https://github.com/davidfekke/jaxnodenext/issues",
   "dependencies": {
-    "asciify": "^1.3.5",
-    "asciimo": "^0.3.1",
+    "@oclif/command": "^1.5.1",
+    "@oclif/config": "^1.7.6",
+    "@oclif/plugin-help": "^2.1.2",
+    "axios": "^0.18.0",
     "chalk": "^1.1.1",
-    "commander": "^2.9.0",
-    "global": "^4.3.1",
+    "figlet": "^1.2.0",
     "open": "0.0.5"
   },
-  "devDependencies": {
-    "chai": "^3.4.1",
-    "gulp": "^3.6.0",
-    "gulp-coveralls": "^0.1.0",
-    "gulp-eslint": "^1.0.0",
-    "gulp-exclude-gitignore": "^1.0.0",
-    "gulp-istanbul": "^0.9.0",
-    "gulp-mocha": "^2.0.0",
-    "gulp-nsp": "^2.1.0",
-    "gulp-plumber": "^1.0.0",
-    "mocha": "^2.3.4",
-    "nock": "^5.2.1",
-    "shelljs": "^0.5.3",
-    "sinon": "^1.17.2"
+  "devDependencies": {},
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/davidfekke/jaxnodenext",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "Apache-2.0",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "jnn"
+  },
+  "repository": "davidfekke/jaxnodenext",
+  "scripts": {
+    "test": "echo NO TESTS"
   }
 }
