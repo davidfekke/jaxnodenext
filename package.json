@@ -22,6 +22,7 @@
   },
   "files": [
     "/bin",
+    "/lib",
     "/src"
   ],
   "homepage": "https://github.com/davidfekke/jaxnodenext",
