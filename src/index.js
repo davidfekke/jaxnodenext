@@ -18,7 +18,7 @@ class JaxnodenextCommand extends Command {
 
     const nextMeeting = await getNextMeeting();
 
-    if (meetingHasVenue(nextMeeting)) {
+    if (nextMeeting.hasOwnProperty('meeting') && meetingHasVenue(nextMeeting.meeting)) {
         mapurl = 'https://www.google.com/maps/place/' + nextMeeting.meeting.venue.name + '/@' + nextMeeting.meeting.venue.lat + ',' + nextMeeting.meeting.venue.lon + 'z18';
         meetingText = 'The next JaxNode meeting will be on ' + nextMeeting.meeting.time + ' at ' + nextMeeting.meeting.venue.name;
     } else {
@@ -42,12 +42,14 @@ class JaxnodenextCommand extends Command {
     if (flags.link) {
         open('https://www.jaxnode.com');
     }
-    if (flags.address && nextMeeting.hasOwnProperty('meeting') && meetingHasVenue(nextMeeting.meeting)) {
-        this.log(nextMeeting.meeting.venue.name);
-        this.log(nextMeeting.meeting.venue.address_1);
-        this.log(nextMeeting.meeting.venue.city + ', ' + nextMeeting.meeting.venue.state);
-    } else {
-        this.log('No address is available yet for the next meeting.')
+    if (flags.address) {   
+        if (nextMeeting.hasOwnProperty('meeting') && meetingHasVenue(nextMeeting.meeting)) {
+            this.log(nextMeeting.meeting.venue.name);
+            this.log(nextMeeting.meeting.venue.address_1);
+            this.log(nextMeeting.meeting.venue.city + ', ' + nextMeeting.meeting.venue.state);
+        } else {
+            this.log('No address is available yet for the next meeting.')
+        }
     }
     if (flags.easteregg) {
         open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
